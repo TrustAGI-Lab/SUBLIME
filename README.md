@@ -21,18 +21,19 @@ All the scripts are included in the "scripts" folder. Please get into this folde
 cd scripts
 ```
 
-Run the setting you want:
-Node classification @ structure inference:
-```
-bash cora_si.sh
-```
+Run the experiments you want:
+
 \[Cora\]Node classification @ structure inference:
 ```
 bash cora_si.sh
 ```
-Node classification @ structure inference:
+\[Cora\]Node classification @ structure refinement:
 ```
-bash cora_si.sh
+bash cora_sr.sh
+```
+\[Cora\]Node clustering @ structure refinement:
+```
+bash cora_clu.sh
 ```
 Node classification @ structure inference:
 ```
