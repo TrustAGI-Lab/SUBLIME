@@ -236,11 +236,6 @@ class Experiment:
                         else:
                             f_adj = f_adj.detach()
 
-                        if args.type_learner == 'gnn':
-                            f_adj = dgl_graph_to_torch_sparse(f_adj)
-                            f_adj = f_adj * args.gamma + anchor_adj_torch_sparse
-                            f_adj = torch_sparse_to_dgl_graph(f_adj)
-
                         val_accu, test_accu, _ = self.evaluate_adj_by_cls(f_adj, features, nfeats, labels,
                                                                                nclasses, train_mask, val_mask, test_mask, args)
 
