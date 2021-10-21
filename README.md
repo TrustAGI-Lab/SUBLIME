@@ -16,12 +16,12 @@ This code requires the following:
 * ogb==1.3.1
 
 ## USAGE
-All the scripts are included in the "scripts" folder. Please get into this folder first.
+### Step 1: All the scripts are included in the "scripts" folder. Please get into this folder first.
 ```
 cd scripts
 ```
 
-Run the experiments you want:
+### Step 2: Run the experiments you want:
 
 \[Cora\]Node classification @ structure inference:
 ```
