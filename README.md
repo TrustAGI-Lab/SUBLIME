@@ -35,24 +35,24 @@ bash cora_sr.sh
 ```
 bash cora_clu.sh
 ```
-Node classification @ structure inference:
+\[Citeseer\]Node classification @ structure inference:
 ```
-bash cora_si.sh
+bash citeseer_si.sh
 ```
-Node classification @ structure inference:
+\[Citeseer\]Node classification @ structure refinement:
 ```
-bash cora_si.sh
+bash citeseer_sr.sh
 ```
-Node classification @ structure inference:
+\[Citeseer\]Node clustering @ structure refinement:
 ```
-bash cora_si.sh
+bash citeseer_clu.sh
 ```
-Node classification @ structure inference:
+\[Pubmed\]Node classification @ structure inference:
 ```
-bash cora_si.sh
+bash pubmed_si.sh
 ```
-Node classification @ structure inference:
+\[Pubmed\]Node classification @ structure refinement:
 ```
-bash cora_si.sh
+bash pubmed_sr.sh
 ```
 
