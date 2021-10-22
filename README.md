@@ -2,7 +2,7 @@
 
 This is the source code of paper Towards Unsupervised Deep Graph Structure Learning (SUBLIME). 
 
-![The proposed framework](framework.png)
+![The proposed framework](pipeline.png)
 
 ## REQUIREMENTS
 This code requires the following:
