@@ -50,24 +50,6 @@ def edge_addition(adj, add_r):
     adj[added_edge_index_out,added_edge_index_in] = 1.
     return adj
 
-def get_random_mask(features, r, nr):
-    nones = torch.sum(features > 0.0).float()
-    nzeros = features.shape[0] * features.shape[1] - nones
-    pzeros = nones / nzeros / r * nr
-    probs = torch.zeros(features.shape).cuda()
-    probs[features == 0.0] = pzeros
-    probs[features > 0.0] = 1 / r
-    mask = torch.bernoulli(probs)
-    return mask
-
-
-def get_node_mask(features, mask_rate):
-    num_node = features.shape[0]
-    mask = torch.zeros(features.shape)
-    samples = np.random.choice(num_node, size=int(num_node * mask_rate), replace=False)
-    mask[samples, :] = 1
-    return mask.cuda(), samples
-
 
 def get_feat_mask(features, mask_rate):
     feat_node = features.shape[1]
@@ -75,12 +57,6 @@ def get_feat_mask(features, mask_rate):
     samples = np.random.choice(feat_node, size=int(feat_node * mask_rate), replace=False)
     mask[:, samples] = 1
     return mask.cuda(), samples
-
-
-def get_random_mask_ogb(features, r):
-    probs = torch.full(features.shape, 1 / r)
-    mask = torch.bernoulli(probs)
-    return mask
 
 
 def accuracy(preds, labels):
@@ -196,6 +172,7 @@ def knn_fast(X, k, b):
     values *= (torch.pow(norm[rows], -0.5) * torch.pow(norm[cols], -0.5))
     return rows, cols, values
 
+
 def sparse_mx_to_torch_sparse_tensor(sparse_mx):
     """Convert a scipy sparse matrix to a torch sparse tensor."""
     sparse_mx = sparse_mx.tocoo().astype(np.float32)
@@ -222,6 +199,7 @@ def dgl_graph_to_torch_sparse(dgl_graph):
     indices = torch.cat((torch.unsqueeze(rows_, 0), torch.unsqueeze(cols_, 0)), 0).cpu()
     torch_sparse_mx = torch.sparse.FloatTensor(indices, values)
     return torch_sparse_mx
+
 
 def torch_sparse_eye(num_nodes):
     indices = torch.arange(num_nodes).repeat(2, 1)

@@ -20,9 +20,6 @@ EOS = 1e-10
 class Experiment:
     def __init__(self):
         super(Experiment, self).__init__()
-        self.citation_datasets = ['cora', 'citeseer', 'pubmed']
-        self.skl_datasets = ['wine', 'cancer', 'digits', '20news']
-        self.ogb_datasets = ['ogbn-arxiv']
 
 
     def setup_seed(self, seed):
@@ -289,11 +286,11 @@ class Experiment:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # Experimental setting
-    parser.add_argument('-dataset', type=str, default='ogbn-arxiv',
+    parser.add_argument('-dataset', type=str, default='cora',
                         choices=['cora', 'citeseer', 'pubmed'])
     parser.add_argument('-ntrials', type=int, default=5)
     parser.add_argument('-sparse', type=int, default=0)
-    parser.add_argument('-gsl_mode', type=str, default="structure_refinement",
+    parser.add_argument('-gsl_mode', type=str, default="structure_inference",
                         choices=['structure_inference', 'structure_refinement'])
     parser.add_argument('-eval_freq', type=int, default=5)
     parser.add_argument('-downstream_task', type=str, default='classification',

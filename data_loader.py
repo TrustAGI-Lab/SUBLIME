@@ -7,13 +7,13 @@ import networkx as nx
 import torch
 import numpy as np
 
-from sklearn import datasets
-from sklearn.preprocessing import LabelBinarizer, scale
-from sklearn.model_selection import train_test_split
-from ogb.nodeproppred import DglNodePropPredDataset
-import copy
+# from sklearn import datasets
+# from sklearn.preprocessing import LabelBinarizer, scale
+# from sklearn.model_selection import train_test_split
+# from ogb.nodeproppred import DglNodePropPredDataset
+# import copy
 
-from utils import sparse_mx_to_torch_sparse_tensor, dgl_graph_to_torch_sparse
+from utils import sparse_mx_to_torch_sparse_tensor #, dgl_graph_to_torch_sparse
 
 warnings.simplefilter("ignore")
 
