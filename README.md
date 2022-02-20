@@ -56,3 +56,14 @@ bash pubmed_si.sh
 bash pubmed_sr.sh
 ```
 
+## Cite
+
+If you compare with, build on, or use aspects of SUBLIME framework, please cite the following:
+```
+@article{liu2022towards,
+  title={Towards Unsupervised Deep Graph Structure Learning},
+  author={Liu, Yixin and Zheng, Yu and Zhang, Daokun and Chen, Hongxu and Peng, Hao and Pan, Shirui},
+  journal={arXiv preprint arXiv:2201.06367},
+  year={2022}
+}
+```
