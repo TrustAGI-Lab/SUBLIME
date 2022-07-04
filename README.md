@@ -60,10 +60,11 @@ bash pubmed_sr.sh
 
 If you compare with, build on, or use aspects of SUBLIME framework, please cite the following:
 ```
-@article{liu2022towards,
-  title={Towards Unsupervised Deep Graph Structure Learning},
+@inproceedings{liu2022towards,
+  title={Towards unsupervised deep graph structure learning},
   author={Liu, Yixin and Zheng, Yu and Zhang, Daokun and Chen, Hongxu and Peng, Hao and Pan, Shirui},
-  journal={arXiv preprint arXiv:2201.06367},
+  booktitle={Proceedings of the ACM Web Conference 2022},
+  pages={1392--1403},
   year={2022}
 }
 ```
