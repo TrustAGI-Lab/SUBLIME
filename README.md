@@ -1,6 +1,6 @@
 # Towards Unsupervised Deep Graph Structure Learning
 
-This is the source code of WWW-2022 paper "Towards Unsupervised Deep Graph Structure Learning" (SUBLIME). 
+This is the source code of WWW-2022 paper "\[[Towards Unsupervised Deep Graph Structure Learning](https://arxiv.org/pdf/2201.06367.pdf)\]" (SUBLIME). 
 
 ![The proposed framework](pipeline.png)
 
